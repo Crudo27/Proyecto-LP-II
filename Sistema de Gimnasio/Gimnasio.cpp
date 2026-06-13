@@ -258,3 +258,18 @@ void Gimnasio::guardarCSV()
     guardarEntrenadores("Entrenadores.csv");
 }
 
+Gimnasio::~Gimnasio()
+{
+    for(Miembro* m: miembros)
+    {
+        delete m;
+    }
+
+    for(Entrenador* e: entrenadores)
+    {
+        delete e;
+    }
+
+    miembros.clear();
+    entrenadores.clear();
+}
