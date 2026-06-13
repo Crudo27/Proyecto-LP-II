@@ -13,20 +13,18 @@ Aplicación de consola que permite gestionar los recursos de un gimnasio: regist
 ## Estructura del Proyecto
 
 ```
-gimnasio/
-├── include/
+Proyecto LP II/
+├── Sistema de Gimnasio/
 │   ├── Persona.h
 │   ├── Miembro.h
 │   ├── Entrenador.h
 │   ├── Suscripcion.h
 │   └── Gimnasio.h
-├── src/
 │   ├── Miembro.cpp
 │   ├── Entrenador.cpp
 │   ├── Suscripcion.cpp
 │   ├── Gimnasio.cpp
 │   └── main.cpp
-├── data/
 │   ├── miembros.csv
 │   └── entrenadores.csv
 └── README.md
