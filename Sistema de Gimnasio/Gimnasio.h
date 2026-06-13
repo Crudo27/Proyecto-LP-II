@@ -43,8 +43,8 @@ class Gimnasio
         void cargarEntrenadores(const string& aentrenadores);
 
         //Persistencia
-        void cargarCSV(const std::string& archivo = "gimnasio.csv");
-        void guardarCSV(const std::string& archivo = "gimnasio.csv");
+        void cargarCSV();
+        void guardarCSV();
 
         ~Gimnasio();
 };

@@ -19,6 +19,8 @@ Gimnasio::Gimnasio(string nombre)
     }
 
     this->nombre = nombre;
+
+    registrarSuscripciones();
 }
 
 template <typename T>
@@ -35,7 +37,7 @@ T* Gimnasio::buscarPorID(const vector<T*>& vec, int id) const
     return nullptr;
 }
 
-void Gimnasio::registrarSuscripciones()
+void Gimnasio::registrarSuscripciones() //Registra todas las suscripciones en el map
 {
     factorySuscripcion["Básica"] = [](){return new SuscripcionBasica();};
     factorySuscripcion["Pro"] = [](){return new SuscripcionPro();};
@@ -46,7 +48,10 @@ Suscripcion* Gimnasio::cargarSuscripciones(const string& tipo)
 {
     auto it = factorySuscripcion.find(tipo);
 
-    
+    if(it != factorySuscripcion.end())
+    {
+        return it->second();
+    }
 }
 
 string Gimnasio::getNombre() const { return nombre; };
