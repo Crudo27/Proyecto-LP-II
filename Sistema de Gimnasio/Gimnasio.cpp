@@ -52,6 +52,8 @@ Suscripcion* Gimnasio::cargarSuscripciones(const string& tipo)
     {
         return it->second();
     }
+
+    throw invalid_argument("Tipo de suscripción desconocido: " + tipo);
 }
 
 string Gimnasio::getNombre() const { return nombre; };
