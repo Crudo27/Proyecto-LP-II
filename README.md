@@ -27,6 +27,9 @@ Proyecto LP II/
 │   └── main.cpp
 │   ├── miembros.csv
 │   └── entrenadores.csv
+|
+├──.gitignore
+├──LICENSE
 └── README.md
 ```
 
