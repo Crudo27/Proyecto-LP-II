@@ -28,7 +28,7 @@ T* Gimnasio::buscarPorID(const vector<T*>& vec, int id) const
 {
     for(T* e: vec)
     {
-        if(e->id == id)
+        if(e->getID() == id)
         {
             return e; 
         }
