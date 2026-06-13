@@ -39,7 +39,6 @@ void Miembro::mostrarInfo() const
 {
     cout<<"Nombre: "<<nombre<<endl;
     cout<<"Edad: "<<edad<<endl;
-    cout<<"Suscripcion: "<<endl;
     cout<<"ID: "<<id<<endl;
     cout<<"Suscripción: "<<endl;
     suscripcion->mostrarInfo();
