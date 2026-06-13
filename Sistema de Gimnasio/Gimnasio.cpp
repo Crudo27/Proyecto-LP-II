@@ -135,6 +135,23 @@ void Gimnasio::cargarMiembros(const string& amiembros)
     arch.close();
 }
 
+void Gimnasio::guardarMiembros(const string& amiembros)
+{
+    ofstream archivo(amiembros);
+    
+    if(!archivo)
+    {
+        throw runtime_error("No se pudo abrir el archivo.");
+    }
+    
+    for(Miembro* m: miembros)
+    {
+        archivo<<m->getID()<<","<<m->getNombre()<<","<<m->getEdad()<<","<<m->getSuscripcion()->getTipo()<<"\n";
+    }
+
+    archivo.close();
+}
+
 void Gimnasio::agregarEntrenador(Entrenador* e)
 {
     entrenadores.push_back(e);

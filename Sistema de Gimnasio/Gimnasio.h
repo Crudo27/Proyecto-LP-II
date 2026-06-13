@@ -34,6 +34,7 @@ class Gimnasio
         Miembro* buscarMiembro(int id) const;
         void mostrarMiembros() const;
         void cargarMiembros(const string& amiembros);
+        void guardarMiembros(const string& amiembros);
 
         //Entrenadores
         void agregarEntrenador(Entrenador* e);
@@ -41,6 +42,7 @@ class Gimnasio
         Entrenador* buscarEntrenador(int id) const;
         void mostrarEntrenadores() const;
         void cargarEntrenadores(const string& aentrenadores);
+        void guardarEntrenadores(const string& aentrenadores);
 
         //Persistencia
         void cargarCSV();
