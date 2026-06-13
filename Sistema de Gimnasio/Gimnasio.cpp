@@ -240,7 +240,7 @@ void Gimnasio::guardarEntrenadores(const string& aentrenadores)
 
     for(Entrenador* e: entrenadores)
     {
-        archivo<<e->getID()<<','<<e->getNombre()<<','<<e->getEdad()<<','<<e->getEspecialidad()<<e->getTarifaHora()<<e->getHorasTrabajadas()<<"\n";
+        archivo<<e->getID()<<','<<e->getNombre()<<','<<e->getEdad()<<','<<e->getEspecialidad()<<','<<e->getTarifaHora()<<','<<e->getHorasTrabajadas()<<"\n";
     }
 
     archivo.close();
