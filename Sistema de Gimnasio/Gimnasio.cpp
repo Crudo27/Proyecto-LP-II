@@ -108,6 +108,8 @@ void Gimnasio::cargarMiembros(const string& amiembros)
 
     while(getline(arch,linea))
     {
+        if(linea.empty()) continue;
+        
         stringstream ss(linea);
 
         string id;
