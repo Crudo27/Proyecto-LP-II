@@ -115,7 +115,19 @@ void Gimnasio::cargarMiembros(const string& amiembros)
         string edad;
         string suscripcion;
         
+        getline(ss,id,',');
+        getline(ss,nombre,',');
+        getline(ss,edad,',');
+        getline(ss,suscripcion,',');
+
+        try
+        {
+            Suscripcion* s = cargarSuscripciones(suscripcion);
+            miembros.push_back(new Miembro(nombre,stoi(edad),stoi(id),s));
+        }
     }
+
+    arch.close();
 }
 
 void Gimnasio::agregarEntrenador(Entrenador* e)
