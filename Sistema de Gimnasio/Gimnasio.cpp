@@ -252,3 +252,9 @@ void Gimnasio::cargarCSV()
     cargarEntrenadores("Entrenadores.csv");
 }
 
+void Gimnasio::guardarCSV()
+{
+    guardarMiembros("Miembros.csv");
+    guardarEntrenadores("Entrenadores.csv");
+}
+
