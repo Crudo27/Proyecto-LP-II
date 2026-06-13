@@ -169,6 +169,49 @@ void Gimnasio::mostrarEntrenadores() const
     }
 }
 
+void Gimnasio::cargarEntrenadores(const string& aentrenadores)
+{
+    ifstream arch(aentrenadores);
+
+    if(!arch)
+    {
+        throw runtime_error("El archivo no pudo cargarse.");
+    }
+    
+    string linea;
+
+    while(getline(arch,linea))
+    {
+        if(linea.empty()) continue;
+        
+        stringstream ss(linea);
+
+        string id;
+        string nombre;
+        string edad;
+        string especialidad;
+        string tarifaHora;
+        string horasTrabajadas;
+        
+        getline(ss,id,',');
+        getline(ss,nombre,',');
+        getline(ss,edad,',');
+        getline(ss,especialidad,',');
+        getline(ss,tarifaHora,',');
+        getline(ss,horasTrabajadas,',');
+
+        try
+        {
+            entrenadores.push_back(new Entrenador(nombre,stoi(edad),stoi(id),especialidad,stod(tarifaHora),stoi(horasTrabajadas)));
+        }catch(const exception& e)
+        {
+            cerr<<"Error al cargar línea: "<<linea<<" -> "<<e.what()<<endl;
+        }
+    }
+
+    arch.close();
+}
+
 void Gimnasio::cargarCSV()
 {
     cargarMiembros("Miembros.csv");
