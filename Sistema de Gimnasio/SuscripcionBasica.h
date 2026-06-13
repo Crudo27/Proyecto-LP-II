@@ -8,6 +8,4 @@ class SuscripcionBasica: public Suscripcion
         SuscripcionBasica();
 
         double calcularDescuento() const override;
-
-        void mostrarInfo() const;
 };
