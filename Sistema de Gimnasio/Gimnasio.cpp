@@ -124,6 +124,9 @@ void Gimnasio::cargarMiembros(const string& amiembros)
         {
             Suscripcion* s = cargarSuscripciones(suscripcion);
             miembros.push_back(new Miembro(nombre,stoi(edad),stoi(id),s));
+        }catch(const exception& e)
+        {
+            cerr<<"Error al cargar línea: "<<linea<<" -> "<<e.what()<<endl;
         }
     }
 
