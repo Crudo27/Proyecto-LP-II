@@ -161,13 +161,16 @@ void Gimnasio::eliminarEntrenador(int id)
 {
     Entrenador* e = buscarEntrenador(id);
 
-    for(auto it = entrenadores.begin(); it != entrenadores.end(); ++it)
+    if(e != nullptr)
     {
-        if(*it == e)
+        for(auto it = entrenadores.begin(); it != entrenadores.end(); ++it)
         {
-            delete *it;
-            entrenadores.erase(it);
-            break;
+            if(*it == e)
+            {
+                delete *it;
+                entrenadores.erase(it);
+                break;
+            }
         }
     }
 }
