@@ -235,7 +235,7 @@ void Gimnasio::guardarEntrenadores(const string& aentrenadores)
 
     if(!archivo)
     {
-        throw invalid_argument("No se pudo abrir el archivo");
+        throw runtime_error("No se pudo abrir el archivo");
     }
 
     for(Entrenador* e: entrenadores)
