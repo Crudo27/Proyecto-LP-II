@@ -229,6 +229,23 @@ void Gimnasio::cargarEntrenadores(const string& aentrenadores)
     arch.close();
 }
 
+void Gimnasio::guardarEntrenadores(const string& aentrenadores)
+{
+    ofstream archivo(aentrenadores);
+
+    if(!archivo)
+    {
+        throw invalid_argument("No se pudo abrir el archivo");
+    }
+
+    for(Entrenador* e: entrenadores)
+    {
+        archivo<<e->getID()<<','<<e->getNombre()<<','<<e->getEdad()<<','<<e->getEspecialidad()<<"\n";
+    }
+
+    archivo.close();
+}
+
 void Gimnasio::cargarCSV()
 {
     cargarMiembros("Miembros.csv");
