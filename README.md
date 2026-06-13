@@ -57,4 +57,6 @@ gimnasio/
 
 ## Autor
 
-Desarrollado como proyecto universitario de **Programación Orientada a Objetos**.
+Desarrollado como proyecto universitario de **Lenguaje de Programación II**.
+
+Gian Piero Khalil Rodríguez Fádel
