@@ -11,7 +11,7 @@ class Entrenador: public Persona
         int horasTrabajadas = 0;
     public:
         Entrenador(string nombre, int edad, string especialidad, double tarifaHora);
-        Entrenador(string nombre, int edad, int id, string especialidad, double tarifaHora);
+        Entrenador(string nombre, int edad, int id, string especialidad, double tarifaHora, int horasTrabajadas);
         
         string getEspecialidad() const;
         double getTarifaHora() const;

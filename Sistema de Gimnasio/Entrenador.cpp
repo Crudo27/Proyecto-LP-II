@@ -19,7 +19,7 @@ Entrenador::Entrenador(string nombre, int edad, string especialidad, double tari
     this->tarifaHora = tarifaHora;
 }
 
-Entrenador::Entrenador(string nombre, int edad, int id, string especialidad, double tarifaHora): Persona(nombre, edad, id) 
+Entrenador::Entrenador(string nombre, int edad, int id, string especialidad, double tarifaHora, int horasTrabajadas): Persona(nombre, edad, id) 
 {
     if(especialidad.empty() || especialidad.length() < 2)
     {
@@ -31,9 +31,16 @@ Entrenador::Entrenador(string nombre, int edad, int id, string especialidad, dou
         throw invalid_argument("Tarifa inválida.");
     }
 
+    if(horasTrabajadas < 0)
+    {
+        throw invalid_argument("Horas trabajadas inválidas.");
+    }
+
     this->especialidad = especialidad;
 
     this->tarifaHora = tarifaHora;
+
+    this->horasTrabajadas = horasTrabajadas;
 }
 
 string Entrenador::getEspecialidad() const { return especialidad; };
